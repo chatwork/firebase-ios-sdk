@@ -37,7 +37,8 @@
 #if defined(__IPHONE_13_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
     }
 #endif  // defined(__IPHONE_13_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
-    UIWindowForModal.windowLevel = UIWindowLevelNormal;
+      // NOTE: iPad で Keyboard accessory view が前面に表示されてしまうため window level をカスタマイズ
+      UIWindowForModal.windowLevel = UIWindowLevelStatusBar;
   });
   return UIWindowForModal;
 }
@@ -57,7 +58,8 @@
 #if defined(__IPHONE_13_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
     }
 #endif
-    UIWindowForBanner.windowLevel = UIWindowLevelNormal;
+      // NOTE: iPad で Keyboard accessory view が前面に表示されてしまうため window level をカスタマイズ
+      UIWindowForBanner.windowLevel = UIWindowLevelStatusBar;
   });
 
   return UIWindowForBanner;
