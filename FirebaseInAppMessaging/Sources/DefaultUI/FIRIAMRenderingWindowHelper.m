@@ -33,8 +33,7 @@
     } else {
       UIWindowForModal = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     }
-    // NOTE: iPad で Keyboard accessory view が前面に表示されてしまうため window level をカスタマイズ
-    UIWindowForModal.windowLevel = UIWindowLevelStatusBar;
+    UIWindowForModal.windowLevel = UIWindowLevelNormal;
   });
   return UIWindowForModal;
 }
@@ -50,8 +49,7 @@
       UIWindowForBanner =
           [[FIRIAMBannerViewUIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     }
-    // NOTE: iPad で Keyboard accessory view が前面に表示されてしまうため window level をカスタマイズ
-    UIWindowForBanner.windowLevel = UIWindowLevelStatusBar;
+    UIWindowForBanner.windowLevel = UIWindowLevelNormal;
   });
 
   return UIWindowForBanner;
