@@ -20,7 +20,7 @@
 #import "FirebaseInAppMessaging/Sources/DefaultUI/Banner/FIRIAMBannerViewUIWindow.h"
 #import "FirebaseInAppMessaging/Sources/DefaultUI/FIRIAMRenderingWindowHelper.h"
 #import "FirebaseInAppMessaging/Sources/Private/Util/UIApplication+FIRForegroundWindowScene.h"
-
+//現在Chatworkで使われているバージョン
 @implementation FIRIAMRenderingWindowHelper
 
 + (UIWindow *)windowForBlockingView {
