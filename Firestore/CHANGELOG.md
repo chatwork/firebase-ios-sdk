@@ -1,3 +1,50 @@
+# 11.12.0
+- [fixed] Fixed the `null` value handling in `isNotEqualTo` and `notIn` filters.
+
+# 11.11.0
+- [fixed] Fixed the customized priority queue compare function used cache index manager. (#14496)
+
+# 11.9.0
+- [fixed] Fixed memory leak in `Query.whereField()`. (#13978)
+
+# 11.8.0
+- [fixed] Fixed use-after-free bug when internally formatting strings. (#14306)
+- [changed] Update gRPC dependency to 1.69.
+
+# 11.6.0
+- [fixed] Add conditional `Sendable` conformance so `ServerTimestamp<T>` is
+  `Sendable` if `T` is `Sendable`. (#14042)
+
+# 11.4.0
+- [changed] Prepare Firestore cache to support session token.
+
+# 11.3.0
+- [changed] Improve efficiency of memory persistence when processing a large number of writes. (#13572)
+
+# 11.2.0
+- [fixed] Marked all public classes with only readonly properties as `Sendable` to address
+  Swift Concurrency Check warning. (#12666)
+
+# 11.1.0
+- [feature] Add `VectorValue` type support.
+
+# 11.0.0
+- [removed] **Breaking change**: The deprecated `FirebaseFirestoreSwift` module
+  has been removed. See
+  https://firebase.google.com/docs/ios/swift-migration for migration
+  instructions.
+- [changed] **Breaking change**: LRU Garbage Collector is now the default GC for memory cache, eager GC is now
+  opt-in (via MemoryCacheSettings(garbageCollectorSettings: MemoryEagerGCSettings())) instead of the default one.
+- [changed] Move `Timestamp` class into `FirebaseCore`. `FirebaseFirestore.Timestamp`
+  was changed to `FirebaseCore.Timestamp`. (#13221)
+- [changed] Update gRPC dependency to 1.65.
+
+# 10.25.0
+- [fixed] Allow blob of data with zero length. (#11773, #12620)
+- [changed] Passing a non-nil value to the `@DocumentID` property wrapper's
+  setter no longer logs a warning since it discouraged valid patterns,
+  e.g., updating the document ID after the document is created in Firestore. (#12756)
+
 # 10.24.0
 - [feature] Enable queries with range & inequality filters on multiple fields. (#12416)
 
