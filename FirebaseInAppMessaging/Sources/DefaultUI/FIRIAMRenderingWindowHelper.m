@@ -23,6 +23,8 @@
 
 @implementation FIRIAMRenderingWindowHelper
 
+//コメントだけ
+
 + (UIWindow *)windowForBlockingView {
   static UIWindow *UIWindowForModal;
   static dispatch_once_t onceToken;
