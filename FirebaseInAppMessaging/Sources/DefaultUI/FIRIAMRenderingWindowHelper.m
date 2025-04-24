@@ -20,7 +20,7 @@
 #import "FirebaseInAppMessaging/Sources/DefaultUI/Banner/FIRIAMBannerViewUIWindow.h"
 #import "FirebaseInAppMessaging/Sources/DefaultUI/FIRIAMRenderingWindowHelper.h"
 #import "FirebaseInAppMessaging/Sources/Private/Util/UIApplication+FIRForegroundWindowScene.h"
-
+//最新バージョンにコメントだけ追加する
 @implementation FIRIAMRenderingWindowHelper
 
 + (UIWindow *)windowForBlockingView {
